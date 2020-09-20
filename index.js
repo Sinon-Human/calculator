@@ -68,7 +68,7 @@ client.on('message', async message => {
 	    let embed = new discord.MessageEmbed();
 	    embed.setColor('FFFF00');
 	    embed.setTitle('Calculator Commands');
-	    embed.setDescription('?help - shows this message ?calc - the claculator command!');
+	    embed.setDescription('?help - shows this message\n\n?calc - the claculator command!');
 	    message.channel.send(embed);
 	}
 });
