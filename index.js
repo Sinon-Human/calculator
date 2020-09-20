@@ -66,28 +66,6 @@ client.on('message', async message => {
 	        })
 	        .catch(console.error);
 	    } 
-	} else if (command === 'message') {
-	    let _msgs = client.msgs[message.author.id].message;
-	    let embed = new discord.MessageEmbed();
-	    embed.setTitle(`${message.author.username}'s message`);
-	    embed.setDescription(`${_msgs}`);
-	    embed.setColor('FFFF00');
-	    message.channel.send(embed);
-	} else if (command === 'add') {
-	    if (args[0] == 'message') {
-	        editmessage = message.content.slice(13);
-	        client.msgs [message.author.id] = {
-	        message: editmessage
-	    }
-	    fs.writeFile("./msgs.json", JSON.stringify(client.msgs, null, 4), err => {
-	        if (err) throw err;
-	        let embed = new discord.MessageEmbed();
-	        embed.setTitle(`${message.author.username} added a new formula`);
-	        embed.setDescription(`**Added**: ${editmessage}`);
-	        embed.setColor('FFFF00');
-	        message.channel.send(embed);
-	    });
-	    }
 	} else if (command == 'help') {
 	    let embed = new discord.MessageEmbed();
 	    embed.setColor('FFFF00');
