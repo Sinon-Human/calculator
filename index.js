@@ -3,8 +3,6 @@ const client = new discord.Client({partials: ['MESSAGE', 'REACTION', 'CHANNEL']}
 const {token, prefix} = require('./config.json');
 const fs = require('fs');
 
-client.msgs = require('./msgs.json')
-
 client.once('ready', async() => {
     console.log(`The bot is now logged in :P`);
 });
